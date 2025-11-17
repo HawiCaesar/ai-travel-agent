@@ -169,7 +169,7 @@ const TravelFormPage = () => {
               <button
                 type="button"
                 onClick={handleDecrement}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold hover:bg-gray-800 transition-colors z-10"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold hover:bg-gray-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-button active:scale-95 transition-all duration-200 z-10"
                 aria-label="Decrease number of travelers"
               >
                 −
@@ -179,16 +179,16 @@ const TravelFormPage = () => {
                 type="number"
                 value={travelers}
                 onChange={handleTravelersChange}
-                className={`custom-ai-travel-agent-font-body w-full px-20 py-4 border-4 ${
-                  errors.travelers ? 'border-red-500' : 'border-brand-border'
-                } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button text-center text-2xl font-bold bg-white`}
+              className={`custom-ai-travel-agent-font-body w-full px-20 py-4 border-4 ${
+                errors.travelers ? 'border-red-500' : 'border-brand-border'
+              } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button focus:ring-opacity-50 text-center text-2xl font-bold bg-white transition-all duration-200`}
                 aria-label="Number of travelers"
                 min="1"
               />
               <button
                 type="button"
                 onClick={handleIncrement}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold hover:bg-gray-800 transition-colors z-10"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold hover:bg-gray-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-button active:scale-95 transition-all duration-200 z-10"
                 aria-label="Increase number of travelers"
               >
                 +
@@ -214,7 +214,7 @@ const TravelFormPage = () => {
               onChange={handleFlyingFromChange}
               className={`custom-ai-travel-agent-font-body w-full px-8 py-4 border-4 ${
                 errors.flyingFrom ? 'border-red-500' : 'border-brand-border'
-              } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button text-center text-2xl font-bold bg-white`}
+              } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button focus:ring-opacity-50 text-center text-2xl font-bold bg-white transition-all duration-200`}
               placeholder="New York City"
               aria-label="Departure city"
             />
@@ -238,7 +238,7 @@ const TravelFormPage = () => {
               onChange={handleFlyingToChange}
               className={`custom-ai-travel-agent-font-body w-full px-8 py-4 border-4 ${
                 errors.flyingTo ? 'border-red-500' : 'border-brand-border'
-              } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button text-center text-2xl font-bold bg-white`}
+              } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button focus:ring-opacity-50 text-center text-2xl font-bold bg-white transition-all duration-200`}
               placeholder="Paris"
               aria-label="Destination city"
             />
@@ -263,7 +263,7 @@ const TravelFormPage = () => {
               min={getTodayISO()}
               className={`custom-ai-travel-agent-font-body w-full px-8 py-4 border-4 ${
                 errors.fromDate ? 'border-red-500' : 'border-brand-border'
-              } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button text-center text-2xl font-bold bg-white`}
+              } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button focus:ring-opacity-50 text-center text-2xl font-bold bg-white transition-all duration-200`}
               aria-label="Departure date"
             />
             {errors.fromDate && (
@@ -287,7 +287,7 @@ const TravelFormPage = () => {
               min={fromDate || getTodayISO()}
               className={`custom-ai-travel-agent-font-body w-full px-8 py-4 border-4 ${
                 errors.toDate ? 'border-red-500' : 'border-brand-border'
-              } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button text-center text-2xl font-bold bg-white`}
+              } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button focus:ring-opacity-50 text-center text-2xl font-bold bg-white transition-all duration-200`}
               aria-label="Return date"
             />
             {errors.toDate && (
@@ -314,7 +314,7 @@ const TravelFormPage = () => {
                 onChange={handleBudgetChange}
                 className={`custom-ai-travel-agent-font-body w-full px-8 py-4 border-4 ${
                   errors.budget ? 'border-red-500' : 'border-brand-border'
-                } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button text-center text-2xl font-bold bg-white pl-12`}
+                } rounded-full focus:outline-none focus:ring-2 focus:ring-brand-button focus:ring-opacity-50 text-center text-2xl font-bold bg-white pl-12 transition-all duration-200`}
                 placeholder="5000"
                 aria-label="Budget in dollars"
                 min="1"
