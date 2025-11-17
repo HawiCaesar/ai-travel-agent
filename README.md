@@ -1,19 +1,18 @@
+# AI Travel Agent
+A simple barebones Travel agent application using OpenAI API tools/functions
+
+Core Requirements
+- Build from scratch ✅. Some very simple setup given from Scrimba
+- Follow the design, see screen-1, screen-2, screen-3 page ✅
+- Its a simple proof of concept ✅
+- Make use of OpenAI API
+- Use the Weather API from OpenWeatherAPP ✅
+- Use a frameworks/library of your choosing - used Typescript + React + Vite + Tailwind ✅
+
 # Getting Started
 Install the dependencies and run the project
 ```
 npm install
 npm start
+npm run dev
 ```
-
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
-
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
-
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
-
-Happy Coding!
