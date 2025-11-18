@@ -9,6 +9,9 @@ const defaultFormData: TravelFormData = {
   fromDate: '',
   toDate: '',
   budget: 0,
+  currentWeather: '',
+  flightRecommendation: null,
+  hotelRecommendation: null,
 };
 
 // Create context

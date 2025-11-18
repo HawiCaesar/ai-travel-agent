@@ -7,6 +7,9 @@ export interface TravelFormData {
   fromDate: string; // dd/MM/YYYY format
   toDate: string; // dd/MM/YYYY format
   budget: number;
+  currentWeather: string;
+  flightRecommendation?: string | null;
+  hotelRecommendation?: string | null;
 }
 
 export interface ValidationErrors {

@@ -137,23 +137,49 @@ const TravelFormPage = () => {
         budget: Number(budget)
       });
 
+    //   const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${flyingTo}&limit=1&appid=3c147c75f75052e97bd6ff753de74cff`);
+	  // const data = (await response.json()) as { lat: string; lon: string }[];
+    // console.log(data);
+
       // get destination weather starting with coordinates
-      const response = await fetch(`https://ai-travel-agent-worker.hawitrial.workers.dev/`, {
-        method: 'POST',
-        body: JSON.stringify({
-          flyingFrom,
-          destination:flyingTo,
-          fromDate,
-          toDate,
-          budget: Number(budget),
-          travelers: Number(travelers)
-        })
-      });
-      const data = await response.json();
+      const response = await fetch(
+        `https://ai-travel-agent-worker.hawitrial.workers.dev/`,
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            flyingFrom,
+            destination: flyingTo,
+            fromDate,
+            toDate,
+            budget: Number(budget),
+            travelers: Number(travelers)
+          })
+        }
+      );
+      const data = (await response.json()) as {
+        response: {
+          currentWeather: string;
+          logisticsPlanRecommendation: string;
+        };
+      };
       console.log(data);
 
-      // Navigate to results page
-      navigate('/results');
+      if (data.response.logisticsPlanRecommendation) {
+        updateFormData({
+          currentWeather: data.response.currentWeather,
+          flightRecommendation: JSON.parse(
+            data.response.logisticsPlanRecommendation
+          ).flightRecommendation,
+          hotelRecommendation: JSON.parse(
+            data.response.logisticsPlanRecommendation
+          ).hotelRecommendation
+        });
+        // Navigate to results page
+        navigate('/results');
+      } else {
+        // show error message
+        console.error('No logistics plan recommendation found');
+      }
     }
   };
 
