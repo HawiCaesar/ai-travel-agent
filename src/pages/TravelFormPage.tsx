@@ -137,10 +137,6 @@ const TravelFormPage = () => {
         budget: Number(budget)
       });
 
-    //   const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${flyingTo}&limit=1&appid=3c147c75f75052e97bd6ff753de74cff`);
-	  // const data = (await response.json()) as { lat: string; lon: string }[];
-    // console.log(data);
-
       // get destination weather starting with coordinates
       const response = await fetch(
         `https://ai-travel-agent-worker.hawitrial.workers.dev/`,
