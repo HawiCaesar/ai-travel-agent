@@ -3,6 +3,7 @@ import { TravelFormData, TravelContextType } from '../types';
 
 // Default form data
 const defaultFormData: TravelFormData = {
+  tripType: '',
   travelers: 0,
   flyingFrom: '',
   flyingTo: '',
@@ -10,8 +11,10 @@ const defaultFormData: TravelFormData = {
   toDate: '',
   budget: 0,
   currentWeather: '',
+  currentWeatherImageUrl: '',
   flightRecommendation: null,
   hotelRecommendation: null,
+  activitiesToDo: [],
 };
 
 // Create context

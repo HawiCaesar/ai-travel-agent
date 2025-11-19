@@ -1,6 +1,7 @@
 // Type definitions for Travel Agent AI
 
 export interface TravelFormData {
+  tripType: 'solo' | 'couple' | 'friends' | 'family' | 'business' | '';
   travelers: number;
   flyingFrom: string;
   flyingTo: string;
@@ -8,11 +9,14 @@ export interface TravelFormData {
   toDate: string; // dd/MM/YYYY format
   budget: number;
   currentWeather: string;
+  currentWeatherImageUrl: string;
   flightRecommendation?: string | null;
   hotelRecommendation?: string | null;
+  activitiesToDo?: string[];
 }
 
 export interface ValidationErrors {
+  tripType?: string;
   travelers?: string;
   flyingFrom?: string;
   flyingTo?: string;
@@ -34,5 +38,6 @@ export interface ButtonProps {
   disabled?: boolean;
   className?: string;
   ariaLabel?: string;
+  variant?: 'primary' | 'outlined';
 }
 
