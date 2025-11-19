@@ -1,5 +1,6 @@
 # AI Travel Agent
 A simple barebones Travel agent application using OpenAI API tools/functions
+The OpenAI API usage is found here https://github.com/HawiCaesar/ai-travel-agent-worker
 
 Core Requirements
 - Build from scratch ✅. Some very simple setup given from Scrimba
