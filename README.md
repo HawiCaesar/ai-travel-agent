@@ -1,5 +1,5 @@
 # AI Travel Agent
-A simple barebones Travel agent application using OpenAI API tools/functions
+A mobile-first AI travel planning app using React, TypeScript, and OpenAI API. Uses mock flights and hotel data (done via OpenAI API LLM text generation) — real booking API integration is out of scope for this project.
 
 The OpenAI API usage is found here https://github.com/HawiCaesar/ai-travel-agent-worker
 
