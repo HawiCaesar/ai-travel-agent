@@ -68,5 +68,4 @@ e2e/
 - 🚧 Accessibility (keyboard navigation, ARIA labels)
 - 🚧 Mobile responsive (viewport testing, touch interactions)
 
-**Documentation**: See E2E_TEST_PLAN.md for complete testing strategy, setup instructions, and all test scenarios.
 

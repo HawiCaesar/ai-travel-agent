@@ -14,6 +14,8 @@ then use Cursor/Claude to generate detailed execution plans (plan.md, stretch.md
 review before building. Design tokens and component conventions are documented and used
 as context for AI-generated code (see COLOR_SCHEME.md).
 
+See E2E_TEST_PLAN.md for complete automated testing strategy, setup instructions, and all test scenarios.
+
 I review all AI-generated code before accepting it — particularly checking that styling
 matches the design tokens, TypeScript types are explicit, and accessibility attributes
 are present.
