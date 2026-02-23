@@ -24,3 +24,49 @@ npm install
 npm start
 npm run dev
 ```
+
+## Testing
+End-to-end tests validate critical user journeys using BrowserBase and Stagehand v3 (AI-powered browser automation).
+
+**Test Framework**: Vitest + Stagehand v3 + BrowserBase (cloud browsers)
+**AI Model**: Anthropic Claude Sonnet 4
+
+### Running Tests
+```bash
+# Run all e2e tests
+npm run test:e2e
+
+# Run specific test
+npm run test:e2e -- e2e/tests/user-flows/happy-path.spec.ts
+
+# Run in headed mode (see browser)
+npm run test:e2e:headed
+```
+
+### Test Structure
+```
+e2e/
+  tests/user-flows/       # Complete user journey tests
+    happy-path.spec.ts    # ✅ Verified working on BrowserBase
+  pages/                  # Page Object Models (AI + code hybrid)
+  fixtures/               # Test data and helpers
+  helpers/                # Stagehand configuration
+```
+
+### Key Features
+- **AI-driven interactions**: Uses natural language to simulate real user behavior
+- **Self-healing tests**: Automatically adapts when UI changes
+- **Cloud browsers**: No local browser setup required
+- **Real API testing**: Tests against actual Cloudflare Worker backend
+
+### Test Coverage
+- ✅ **Happy Path**: Complete journey (landing → form → API → results) - verified working
+  - 📹 [Video evidence](https://drive.google.com/file/d/1eDaFyyv05X36eVwXsed6bXHuoDgO5Crh/view?usp=sharing) - BrowserBase execution
+- 🚧 Form validation flows (cascading validation, real-time errors)
+- 🚧 API error handling (network failures, retry logic)
+- 🚧 State management (TravelContext persistence and reset)
+- 🚧 Accessibility (keyboard navigation, ARIA labels)
+- 🚧 Mobile responsive (viewport testing, touch interactions)
+
+**Documentation**: See E2E_TEST_PLAN.md for complete testing strategy, setup instructions, and all test scenarios.
+

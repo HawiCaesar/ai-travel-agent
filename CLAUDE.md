@@ -83,3 +83,5 @@ src/
 - plan.md — AI-generated execution plan from INIT.md
 - stretch.md — AI-generated execution plan from STRETCH_GOALS.md
 - COLOR_SCHEME.md — design token documentation
+- E2E_TEST_PLAN.md — comprehensive e2e testing strategy
+

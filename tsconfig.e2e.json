@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@e2e/*": ["./e2e/*"],
+      "@helpers/*": ["./e2e/helpers/*"],
+      "@fixtures/*": ["./e2e/fixtures/*"]
+    }
+  },
+  "include": ["e2e/**/*"]
+}
