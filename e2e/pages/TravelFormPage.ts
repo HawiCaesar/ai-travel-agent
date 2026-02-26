@@ -67,7 +67,15 @@ export class TravelFormPage extends BasePage {
   }
 
   async setBudget(amount: number): Promise<void> {
-    await this.act(`type ${amount} in the budget field`);
+    // Bypass Stagehand act() — negative numbers cause AI_TypeValidationError
+    // because the AI returns arguments as a string instead of an array.
+    // Use the React native setter trick (same as setFromDate/setToDate).
+    await this.page.evaluate((val: string) => {
+      const el = document.querySelector('#budget') as HTMLInputElement;
+      const setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')!.set!;
+      setter.call(el, val);
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+    }, String(amount));
   }
 
   async fillValidForm(data: TravelFormData): Promise<void> {
@@ -107,7 +115,11 @@ export class TravelFormPage extends BasePage {
   }
 
   async areTravelerControlsDisabled(): Promise<boolean> {
-    return await this.observe("the increment and decrement buttons for travelers are disabled");
+    return await this.page.evaluate(() => {
+      const decrement = document.querySelector('button[aria-label="Decrease number of travelers"]') as HTMLButtonElement | null;
+      const increment = document.querySelector('button[aria-label="Increase number of travelers"]') as HTMLButtonElement | null;
+      return (decrement?.disabled ?? false) && (increment?.disabled ?? false);
+    });
   }
 
   async dismissError(): Promise<void> {

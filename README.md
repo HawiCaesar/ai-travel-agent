@@ -62,7 +62,8 @@ e2e/
 ### Test Coverage
 - ✅ **Happy Path**: Complete journey (landing → form → API → results) - verified working
   - 📹 [Video evidence](https://drive.google.com/file/d/1eDaFyyv05X36eVwXsed6bXHuoDgO5Crh/view?usp=sharing) - BrowserBase execution
-- 🚧 Form validation flows (cascading validation, real-time errors)
+- ✅ **Form Validation Flows**: Cascading validation, real-time errors - verified working locally and on BrowserBase
+  - 📹 [Video evidence](https://drive.google.com/file/d/1qHURkkhwAN3rcMXyKC3zyzpgYbc_D4rw/view?usp=sharing) - BrowserBase execution
 - 🚧 API error handling (network failures, retry logic)
 - 🚧 State management (TravelContext persistence and reset)
 - 🚧 Accessibility (keyboard navigation, ARIA labels)
