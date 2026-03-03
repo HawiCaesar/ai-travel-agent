@@ -46,11 +46,12 @@ npm run test:e2e:headed
 ### Test Structure
 ```
 e2e/
-  tests/user-flows/       # Complete user journey tests
-    happy-path.spec.ts    # ✅ Verified working on BrowserBase
-  pages/                  # Page Object Models (AI + code hybrid)
-  fixtures/               # Test data and helpers
-  helpers/                # Stagehand configuration
+  tests/user-flows/             # Complete user journey tests
+    happy-path.spec.ts          # ✅ Verified working on BrowserBase
+    validation-flows.spec.ts    # ✅ Verified working on BrowserBase
+  pages/                        # Page Object Models (AI + code hybrid)
+  fixtures/                     # Test data and helpers
+  helpers/                      # Stagehand configuration
 ```
 
 ### Key Features
